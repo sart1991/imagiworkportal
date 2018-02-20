@@ -123,4 +123,6 @@ public class ImagiActivity {
         return obj != null && obj instanceof ImagiActivity &&
                 this.id.equals(((ImagiActivity)obj).id);
     }
+
+
 }

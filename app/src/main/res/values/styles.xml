@@ -3,9 +3,32 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primaryDark</item>
+        <item name="colorAccent">@color/accent</item>
     </style>
 
+    <style name="LargeTitle" parent="Base.TextAppearance.AppCompat.Large">
+        <item name="android:textColor">@color/accent</item>
+    </style>
+
+    <style name="MediumTitle" parent="Base.TextAppearance.AppCompat.Medium">
+        <item name="android:textColor">@color/accent</item>
+    </style>
+
+    <style name="SmallTitle" parent="Base.TextAppearance.AppCompat.Small">
+        <item name="android:textColor">@color/primary</item>
+    </style>
+
+    <style name="LargeText" parent="Base.TextAppearance.AppCompat.Large">
+        <item name="android:textColor">@color/largeText</item>
+    </style>
+
+    <style name="MediumText" parent="Base.TextAppearance.AppCompat.Medium">
+        <item name="android:textColor">@color/mediumText</item>
+    </style>
+
+    <style name="SmallText" parent="Base.TextAppearance.AppCompat.Small">
+        <item name="android:textColor">@color/smallText</item>
+    </style>
 </resources>

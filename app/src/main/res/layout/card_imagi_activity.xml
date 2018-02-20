@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <android.support.v7.widget.CardView
@@ -19,8 +19,57 @@
             android:padding="8dp">
 
             <TextView
+                android:id="@+id/textView_imagiActivityCard_nameEmployee"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="Test Name"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/textView_imagiActivityCard_startDate"
+                style="@style/LargeText"/>
+
+            <TextView
+                android:id="@+id/textView_imagiActivityCard_startDate_static"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_since"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView_imagiActivityCard_startDate"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_imagiActivityCard_startDate"/>
+
+            <TextView
+                android:id="@+id/textView_imagiActivityCard_startDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Test Start Date"
+                android:layout_marginLeft="4dp"
+                app:layout_constraintLeft_toRightOf="@id/textView_imagiActivityCard_startDate_static"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView_imagiActivityCard_nameEmployee"
+                app:layout_constraintBottom_toTopOf="@+id/textView_imagiActivityCard_endDate"
+                style="@style/MediumText"/>
+
+            <TextView
+                android:id="@+id/textView_imagiActivityCard_endDate_static"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_until"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView_imagiActivityCard_endDate"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_imagiActivityCard_endDate"/>
+
+            <TextView
+                android:id="@+id/textView_imagiActivityCard_endDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Test End Date"
+                android:layout_marginLeft="4dp"
+                app:layout_constraintLeft_toRightOf="@id/textView_imagiActivityCard_endDate_static"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView_imagiActivityCard_startDate"
+                app:layout_constraintBottom_toBottomOf="parent"
+                style="@style/MediumText"/>
 
         </android.support.constraint.ConstraintLayout>
 
