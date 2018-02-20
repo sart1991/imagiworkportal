@@ -123,10 +123,31 @@
         android:layout_height="wrap_content"
         android:text="Test end date"
         android:layout_marginLeft="4dp"
-        android:layout_marginBottom="32dp"
         app:layout_constraintLeft_toRightOf="@id/textView_detailsActivity_endDate_static"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_detailsActivity_beginDate"
+        app:layout_constraintBottom_toTopOf="@+id/textView_detailsActivity_approved"
+        style="@style/MediumText"/>
+
+    <TextView
+        android:id="@+id/textView_detailsActivity_approved_static"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_approved"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView_detailsActivity_approved"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_detailsActivity_approved"/>
+
+    <TextView
+        android:id="@+id/textView_detailsActivity_approved"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Test approved"
+        android:layout_marginLeft="4dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintLeft_toRightOf="@id/textView_detailsActivity_approved_static"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView_detailsActivity_endDate"
         app:layout_constraintBottom_toTopOf="@+id/button_detailsActivity_approve"
         style="@style/MediumText"/>
 

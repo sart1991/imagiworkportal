@@ -78,6 +78,10 @@ public class ImagiActivitiesManager {
         return mAppDatabase.getImagiActivityDao().get(id);
     }
 
+    public void insertImagiActivity(ImagiActivity imagiActivity) {
+        mAppDatabase.getImagiActivityDao().add(imagiActivity);
+    }
+
     private static class AsyncSaveImagiActivities extends AsyncTask<ImagiActivityRes, Void, Void> {
 
         private AppDatabase mAppDatabase;

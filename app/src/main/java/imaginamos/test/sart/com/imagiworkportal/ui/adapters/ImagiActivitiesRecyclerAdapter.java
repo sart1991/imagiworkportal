@@ -2,6 +2,7 @@ package imaginamos.test.sart.com.imagiworkportal.ui.adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,10 +48,19 @@ public class ImagiActivitiesRecyclerAdapter extends
         String employeeName = imagiActivity.getEmployee();
         String startDate = imagiActivity.getBeginDate();
         String endDate = imagiActivity.getEndDate();
+        String approved = imagiActivity.getApproved();
 
         holder.txtViewName.setText(employeeName);
         holder.txtViewStartDate.setText(startDate);
         holder.txtViewEndDate.setText(endDate);
+
+        if (approved == null || TextUtils.isEmpty(approved)) {
+            holder.viewApproved.setBackgroundResource(R.color._black);
+        } else if (approved.toLowerCase().equals("true")) {
+            holder.viewApproved.setBackgroundResource(R.color._green);
+        } else {
+            holder.viewApproved.setBackgroundResource(R.color._red);
+        }
     }
 
     @Override
@@ -63,6 +73,7 @@ public class ImagiActivitiesRecyclerAdapter extends
         TextView txtViewName;
         TextView txtViewStartDate;
         TextView txtViewEndDate;
+        View viewApproved;
 
         public ImagiActivitiesViewHolder(View itemView) {
             super(itemView);
@@ -73,6 +84,7 @@ public class ImagiActivitiesRecyclerAdapter extends
             txtViewName = v.findViewById(R.id.textView_imagiActivityCard_nameEmployee);
             txtViewStartDate = v.findViewById(R.id.textView_imagiActivityCard_startDate);
             txtViewEndDate = v.findViewById(R.id.textView_imagiActivityCard_endDate);
+            viewApproved = v.findViewById(R.id.view_imagiActivityCard_approved);
 
             bindViewsActions();
         }

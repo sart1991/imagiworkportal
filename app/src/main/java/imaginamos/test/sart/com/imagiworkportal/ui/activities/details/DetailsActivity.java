@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -20,9 +21,10 @@ public class DetailsActivity extends AppCompatActivity {
 
     private DetailsViewModel viewModel;
     private String imagiActivityId;
+    private ImagiActivity mImagiActivity;
 
     private TextView txtEmployeeName, txtTypeProcess, txtRequestDate,
-                     txtLastVacations, txtBeginDate, txtEndDate;
+                     txtLastVacations, txtBeginDate, txtEndDate, txtApproved;
 
     private Button btnApprove, btnDeny;
 
@@ -53,8 +55,33 @@ public class DetailsActivity extends AppCompatActivity {
         txtLastVacations = findViewById(R.id.textView_detailsActivity_lastVacations);
         txtBeginDate = findViewById(R.id.textView_detailsActivity_beginDate);
         txtEndDate = findViewById(R.id.textView_detailsActivity_endDate);
+        txtApproved = findViewById(R.id.textView_detailsActivity_approved);
         btnApprove = findViewById(R.id.button_detailsActivity_approve);
         btnDeny = findViewById(R.id.button_detailsActivity_deny);
+        configViews();
+    }
+
+    private void configViews() {
+        btnApprove.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (mImagiActivity != null) {
+                    mImagiActivity.setApproved("true");
+                    viewModel.updateimagiActivity(mImagiActivity);
+                    gotoMainActivity();
+                }
+            }
+        });
+        btnDeny.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (mImagiActivity != null) {
+                    mImagiActivity.setApproved("false");
+                    viewModel.updateimagiActivity(mImagiActivity);
+                    gotoMainActivity();
+                }
+            }
+        });
     }
 
     private void initInfo() {
@@ -71,12 +98,14 @@ public class DetailsActivity extends AppCompatActivity {
                 }
                 Log.i(TAG, "onClickCard: name: " + imagiActivity.getEmployee()
                         + " code: " + imagiActivity.getId());
+                mImagiActivity = imagiActivity;
                 txtEmployeeName.setText(imagiActivity.getEmployee());
                 txtTypeProcess.setText(imagiActivity.getProcess());
                 txtRequestDate.setText(imagiActivity.getRequestDate());
                 txtLastVacations.setText(imagiActivity.getLastVacationOn());
                 txtBeginDate.setText(imagiActivity.getBeginDate());
                 txtEndDate.setText(imagiActivity.getEndDate());
+                txtApproved.setText(imagiActivity.getApproved());
             }
         });
     }

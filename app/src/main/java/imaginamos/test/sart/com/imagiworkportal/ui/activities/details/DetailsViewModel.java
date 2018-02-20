@@ -21,4 +21,8 @@ public class DetailsViewModel extends ViewModel {
     public LiveData<ImagiActivity> getLiveImagiActivity(String id) {
         return mDataManager.getImagiActivitiesManager().getLiveImagiActivity(id);
     }
+
+    public void updateimagiActivity(ImagiActivity imagiActivity) {
+        mDataManager.getImagiActivitiesManager().insertImagiActivity(imagiActivity);
+    }
 }
