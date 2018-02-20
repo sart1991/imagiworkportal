@@ -4,6 +4,148 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="imaginamos.test.sart.com.imagiworkportal.ui.activities.details.DetailsActivity">
+    tools:context="imaginamos.test.sart.com.imagiworkportal.ui.activities.details.DetailsActivity"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textView_detailsActivity_employeeName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:text="Test Name"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textView_detailsActivity_typeProcess"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintVertical_chainStyle="spread"
+        style="@style/LargeTitle"/>
+
+    <TextView
+        android:id="@+id/textView_detailsActivity_typeProcess_static"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_process"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView_detailsActivity_typeProcess"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_detailsActivity_typeProcess"/>
+
+    <TextView
+        android:id="@+id/textView_detailsActivity_typeProcess"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Test process"
+        android:layout_marginLeft="4dp"
+        app:layout_constraintLeft_toRightOf="@id/textView_detailsActivity_typeProcess_static"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView_detailsActivity_employeeName"
+        app:layout_constraintBottom_toTopOf="@+id/textView_detailsActivity_requestDate"
+        style="@style/MediumText"/>
+
+    <TextView
+        android:id="@+id/textView_detailsActivity_requestDate_static"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_request_date"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView_detailsActivity_requestDate"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_detailsActivity_requestDate"/>
+
+    <TextView
+        android:id="@+id/textView_detailsActivity_requestDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Test request date"
+        android:layout_marginLeft="4dp"
+        app:layout_constraintLeft_toRightOf="@id/textView_detailsActivity_requestDate_static"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView_detailsActivity_typeProcess"
+        app:layout_constraintBottom_toTopOf="@+id/textView_detailsActivity_lastVacations"
+        style="@style/MediumText"/>
+
+    <TextView
+        android:id="@+id/textView_detailsActivity_lastVacations_static"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_last_vacations"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textView_detailsActivity_lastVacations"
+        app:layout_constraintBottom_toBottomOf="@id/textView_detailsActivity_lastVacations"/>
+
+    <TextView
+        android:id="@+id/textView_detailsActivity_lastVacations"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Test last vacation"
+        android:layout_marginLeft="4dp"
+        app:layout_constraintLeft_toRightOf="@id/textView_detailsActivity_lastVacations_static"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView_detailsActivity_requestDate"
+        app:layout_constraintBottom_toTopOf="@+id/textView_detailsActivity_beginDate"
+        style="@style/MediumText"/>
+
+    <TextView
+        android:id="@+id/textView_detailsActivity_beginDate_static"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_begin_date"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView_detailsActivity_beginDate"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_detailsActivity_beginDate"/>
+
+    <TextView
+        android:id="@+id/textView_detailsActivity_beginDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Test begit date"
+        android:layout_marginLeft="4dp"
+        app:layout_constraintLeft_toRightOf="@id/textView_detailsActivity_beginDate_static"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView_detailsActivity_lastVacations"
+        app:layout_constraintBottom_toTopOf="@+id/textView_detailsActivity_endDate"
+        style="@style/MediumText"/>
+
+    <TextView
+        android:id="@+id/textView_detailsActivity_endDate_static"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_end_date"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView_detailsActivity_endDate"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_detailsActivity_endDate"/>
+
+    <TextView
+        android:id="@+id/textView_detailsActivity_endDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Test end date"
+        android:layout_marginLeft="4dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintLeft_toRightOf="@id/textView_detailsActivity_endDate_static"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_detailsActivity_beginDate"
+        app:layout_constraintBottom_toTopOf="@+id/button_detailsActivity_approve"
+        style="@style/MediumText"/>
+
+    <Button
+        android:id="@+id/button_detailsActivity_approve"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/_approve"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/button_detailsActivity_deny"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/button_detailsActivity_deny"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/_deny"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/button_detailsActivity_approve"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </android.support.constraint.ConstraintLayout>

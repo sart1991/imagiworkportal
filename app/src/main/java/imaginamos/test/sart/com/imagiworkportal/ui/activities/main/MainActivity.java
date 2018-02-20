@@ -14,6 +14,8 @@ import java.util.List;
 import imaginamos.test.sart.com.imagiworkportal.R;
 import imaginamos.test.sart.com.imagiworkportal.data.db.models.ImagiActivity;
 import imaginamos.test.sart.com.imagiworkportal.ui.activities.BaseActivity;
+import imaginamos.test.sart.com.imagiworkportal.ui.activities.details.DetailsActivity;
+import imaginamos.test.sart.com.imagiworkportal.ui.activities.details.ImagiActivitiesDetailsConstants;
 import imaginamos.test.sart.com.imagiworkportal.ui.activities.login.LoginActivity;
 import imaginamos.test.sart.com.imagiworkportal.ui.adapters.ImagiActivitiesRecyclerAdapter;
 
@@ -74,5 +76,9 @@ public class MainActivity extends BaseActivity
     public void onClickCard(ImagiActivity imagiActivity) {
         Log.i(TAG, "onClickCard: name: " + imagiActivity.getEmployee()
                 + " code: " + imagiActivity.getId());
+        Intent intent = new Intent(this, DetailsActivity.class);
+        intent.putExtra(
+                ImagiActivitiesDetailsConstants.INTENT_EXTRA_ID.getKey(), imagiActivity.getId());
+        startActivity(intent);
     }
 }

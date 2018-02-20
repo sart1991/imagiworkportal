@@ -7,4 +7,11 @@
     <color name="largeText">#212121</color>
     <color name="mediumText">#424242</color>
     <color name="smallText">#848484</color>
+
+    <!--Base colors-->
+    <color name="_red">#D50000</color>
+    <color name="_green">#388E3C</color>
+    <color name="_black">#212121</color>
+    <color name="_gray">#424242</color>
+    <color name="_lightGray">#848484</color>
 </resources>

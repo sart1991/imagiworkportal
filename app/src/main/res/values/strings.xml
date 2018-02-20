@@ -16,4 +16,11 @@
     </string>
     <string name="_since">Since:</string>
     <string name="_until">Until:</string>
+    <string name="_end_date">End date:</string>
+    <string name="_begin_date">Begin date:</string>
+    <string name="_last_vacations">Last vacations:</string>
+    <string name="_request_date">Request date:</string>
+    <string name="_process">Process:</string>
+    <string name="_deny">Deny</string>
+    <string name="_approve">Approve</string>
 </resources>
