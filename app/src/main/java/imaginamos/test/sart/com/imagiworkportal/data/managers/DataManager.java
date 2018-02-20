@@ -8,12 +8,14 @@ public class DataManager {
 
     private UsersManager mUsersManager;
     private ImagiActivitiesManager mImagiActivitiesManager;
+    private PreferencesManager mPreferencesManager;
 
     private static DataManager instance;
 
     private DataManager() {
         mUsersManager = UsersManager.get();
         mImagiActivitiesManager = ImagiActivitiesManager.get();
+        mPreferencesManager = PreferencesManager.get();
     }
 
     public static DataManager get() {
@@ -33,5 +35,10 @@ public class DataManager {
     public ImagiActivitiesManager getImagiActivitiesManager() {
         return mImagiActivitiesManager;
     }
+
+    public PreferencesManager getPreferencesManager() {
+        return mPreferencesManager;
+    }
+
 
 }
